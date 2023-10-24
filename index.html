@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MortgageCalculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            background-color: #F8F4EA
+        }
+        
+        .main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 40%;
+        }
+
+        .homevalue {
+            width: 100%;
+            height: 10%;
+            margin: 0;
+            padding: 0;
+            
+        }
+        
+        .homevaluefieldset {
+            background-color: #E1D7C6;
+            margin: 0;
+            height: 100%;
+            border: 2px solid #FFF;
+            display: grid;
+            grid-template-columns: repeat(10, 10%);
+            grid-template-rows: repeat(3, 33%);
+
+        }
+        
+        label {
+            grid-column: 3/ 5;
+            grid-row: 2;
+        }
+
+
+
+        input {
+            grid-column: 5/ 7;
+            grid-row: 2/ 3;
+            height: 10px;
+        }
+
+        .input2 {
+            grid-column: 6/ 9;
+            grid-row: 2/ 3;
+        }
+
+        .radio1 {
+            grid-column: 7/8;
+            grid-row: 2;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .radio2 {
+            grid-column: 8/9;
+            grid-row: 2;
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .label2 {
+            grid-column: 7/ 8;
+            grid-row: 2;
+            margin-left: 10px;
+       
+        }
+        
+        form {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .buttondiv {
+            display: flex;
+            background-color: #E1D7C6;
+            border: 2px solid #FFF;
+            justify-content: center;
+            padding: 10px;
+            height: 50%;
+               }
+
+        button {
+            background-color: #ECE8DD;
+        }
+
+        .dropbtn {
+  background-color: #579BB1;
+  display: inline;
+  color: white;
+  font-size: 12px;
+  border: none;
+  padding: 5px;
+  grid-column: 3/ 5;
+  grid-row: 2/ 3;
+}
+
+/* The container <div> - needed to position the dropdown content */
+       .dropdown {
+  position: relative;
+  display: inline-block;
+  grid-column: 5/ 7;
+grid-row: 2/ 3;
+}
+
+/* Dropdown Content (Hidden by Default) */
+       .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 16px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+      .dropdown-content p {
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #0000FF;}
+
+
+
+@media (max-width: 680px) {
+    div {
+        font-size: 12px;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .homevalue {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .homevaluefieldset {
+        display: flex;
+        flex-direction: row;
+    
+    }
+    input {
+        width: 50;
+        height: 50%;
+        font-size: 12px;
+        margin: 5px;
+    }
+    
+    .dropbtn {
+        font-size: 12px;
+        padding: 0%;
+        width: 50%;
+    }
+
+    label {
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    .label2 {
+        font-size: 12px;
+          margin-left: 5px;
+     }
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="homevalue">
+         <form>
+            <fieldset class="homevaluefieldset">
+                 <label>Home value:</label>
+                 <input type="text" placeholder="40000">
+                 <label class="label2">$</label>
+            </fieldset>
+         </form>
+        </div>
+        <div class="homevalue">
+            <form>
+            <fieldset class="homevaluefieldset">
+                 <label>Down payment:</label>
+                 <input type="text" placeholder="400000">
+                 <div class="radio1">
+                 <input type="radio" checked>
+                 <label class="label2">$</p>
+                </div>
+                 <div class="radio2">
+                <input type="radio">
+                 <label class="label2">%</p>
+                </div>
+            </fieldset>
+         </form>
+        </div>
+        <div class="homevalue">
+            <form>
+            <fieldset class="homevaluefieldset">
+                 <label>Loan Amount:</label>
+                 <input type="text" placeholder="32000">
+                 <label class="label2">$</label>
+            </fieldset>
+         </form>
+        </div>
+        <div class="homevalue">
+            <form>
+                <fieldset class="homevaluefieldset">
+                     <label>Interest Rate:</label>
+                     <input type="text" placeholder="6.7">
+                     <label class="label2">%</label>
+                </fieldset>
+             </form>
+        </div>
+        <div class="homevalue"> 
+            
+            <div class="buttondiv">
+                <button type="button">
+                See Long Beach's Best Rates
+               </button>
+        </div>
+        <div class="homevalue">
+            <form>
+                <fieldset class="homevaluefieldset">
+                     <label>Loan Term:</label>
+                     <input type="text" placeholder="30">
+                     <label class="label2">Years</label>
+                </fieldset>
+             </form>
+        </div>
+        <div class="homevalue">
+            <fieldset class="homevaluefieldset">
+                <label>Start Date</label>
+                <input type="text" class="input2" placeholder="2023">
+                <div class="dropdown">
+                    <button class="dropbtn">Month</button>
+                    <div class="dropdown-content">
+                      <p>Jan</p>
+                      <p>Feb</p>
+                      <p>Mar</p>
+                      <p>Apr</p>
+                      <p>May</p>
+                      <p>Jun</p>
+                      <p>Jul</p>
+                      <p>Aug</p>
+                      <p>Sep</p>
+                      <p>Oct</p>
+                      <p>Nov</p>
+                      <p>Dec</p>
+                  </div>
+                
+           </fieldset>
+        </form>
+        </div>
+        <div class="homevalue">
+            <form>
+            <fieldset class="homevaluefieldset">
+                 <label>Property Tax:</label>
+                 <input type="text" placeholder="2400">
+                 <label class="label2">$/yr</label>
+            </fieldset> 
+            </form>
+        </div>
+        <div class="homevalue">
+            <form>
+                <fieldset class="homevaluefieldset">
+                     <label>PMI:</label>
+                     <input type="text" placeholder="0.5">
+                     <label class="label2">%</label>
+                </fieldset> 
+                </form>
+        </div>
+        <div class="homevalue">
+            <form>
+                <fieldset class="homevaluefieldset">
+                     <label>Home Ins:</label>
+                     <input type="text" placeholder="1000">
+                     <label class="label2">$/yr</label>
+                </fieldset> 
+                </form>
+        </div>
+        <div class="homevalue">
+            <form>
+                <fieldset class="homevaluefieldset">
+                     <label>Monthly HOA:</label>
+                     <input type="text" placeholder="0">
+                     <label class="label2">$</label>
+                </fieldset> 
+                </form>
+        </div>
+        <div class="homevalue">
+            <fieldset class="homevaluefieldset">
+              <label>Loantype</label>
+               <div class="dropdown">
+                <button class="dropbtn">Conventional</button>
+                <div class="dropdown-content">
+                  <p>Conventional</p>
+                  <p>FHA</p>
+                  <p>VA</p>
+                  <p>USDA</p>
+                </div>
+               </label>
+              </fieldset>
+            </div>
+        </div>
+            <div class="buttondiv">
+            <button  type="button">
+             Compare Loan Types
+           </button> 
+       </div>
+       <div class="homevalue">
+        <fieldset class="homevaluefieldset"> 
+          <label>Buy or Refi</label>
+            <div class="dropdown"> 
+              <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+              <p>Buy</p>
+              <p>Refi</p>
+            </div>
+          </div>
+        </fieldset>            
+       </div>
+    </div>
+</body>
+</html>
